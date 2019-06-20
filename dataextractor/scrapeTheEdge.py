@@ -4,9 +4,10 @@ import lxml.html
 import webbrowser
 import pandas as pd
 
+
 def data_extractor():
     # Edge
-    titles = ["Title","Date","Contents"]
+    titles = ["Title", "Date", "Contents"]
     df1 = pd.DataFrame(columns=titles)
 
     i = 1
@@ -44,7 +45,8 @@ def data_extractor():
 
     i + 1
 
-    df1.to_json(r'theEdge.json')
+    # df1.to_json(r'theEdge.json')
+    data = df1.to_json()
+    return data
 
-
-data_extractor()
+# data_extractor()
